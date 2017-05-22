@@ -1,2 +1,10 @@
-<img src='http://bit.ly/1eze8aE' style='border:3px dashed red'>
+<img src='http://bit.ly/1eze8aE' style="border:3px dashed red">
 <h1> My name is <%= @name%>, <%= @surname%> and I will eat your soul, villainously!</h1>
+<% if @name == nil %>
+  <form action="/named-cat">
+    <div>
+      <input type="text" name="name">
+      <input type="submit" value="submit">
+    </div>
+  </form>
+<% end %>
